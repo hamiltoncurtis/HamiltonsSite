@@ -70,7 +70,11 @@ body {
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+      legend: {
+        display:false
+      }
+    }
     });
   </script>
 <h2>Version 2</h2>
@@ -84,7 +88,7 @@ body {
 
     // The data for our dataset
     data: {
-        label: 'First Version',
+        label: 'Second Version',
         backgroundColor: "rgba(46, 49, 49, 1)",
         labels: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29'],
         datasets: [{
@@ -110,7 +114,7 @@ body {
     options: {}
     });
   </script>
-
+<p> For the second version of my chart, I added some visual elements that will help the reader. I added a legend at the top of the page and also gave each category its own color to tell them apart on chart.</p>
 <h2>Version 3</h2>
 <canvas id="myChart3"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -122,7 +126,7 @@ body {
 
     // The data for our dataset
     data: {
-        label: 'First Version',
+        label: 'Third Version',
         backgroundColor: "rgba(46, 49, 49, 1)",
         labels: ['19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29'],
         datasets: [{
@@ -179,7 +183,7 @@ body {
     }
     });
   </script>
-
+<p>For the final version of this chart I add some interactivity elements. I utilized tooltips to render a more in-depth descrition when you hover over an area on the chart. I also made some color changes to hwlp with readability on the page.</p>
 
 </body>
 </html>
