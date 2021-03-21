@@ -5,12 +5,10 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
 	<title>Contact</title>
   <style>
 body {
@@ -49,7 +47,18 @@ body {
     </li>
   </ul>
 </nav>
-
+<canvas id="myChart"></canvas>
+    <br>
+    <p class="center"><button id="showYear" class="hide">Toggle to Year</button></p>
+    <!-- (best practice to load all the script files at the bottom) -->
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!-- loading a javascript library for data visualization Charts.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <!-- local javascript file -->
+    <script src="script.js"></script>
 
 </body>
 </html>
