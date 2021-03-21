@@ -64,6 +64,7 @@ body {
 $.getJSON("PrecinctWarningData.json", function(data_from_file){
 
     var ctx = document.getElementById('myChart').getContext('2d');
+    console.log("hey you got data")
     console.log(data_from_file)
 
     var chart = new Chart(ctx, {
@@ -74,10 +75,10 @@ $.getJSON("PrecinctWarningData.json", function(data_from_file){
         data: {
             labels: ['Vehicular', 'Pedestrian'],
             datasets: [{
-                label: 'Fake data',
-                backgroundColor: ['#365232',
-                                  '#000000'],
-                borderColor: 'rgb(255, 99, 132)',
+                label: 'Percentages of Stops that End in Warnings',
+                backgroundColor: ['#911d1d',
+                                  '#47634b'],
+                borderColor: '#FFFFFF',
                 data: [data_from_file["x"], data_from_file["y"]],
             }]
         },
@@ -100,6 +101,8 @@ $.getJSON("PrecinctWarningData.json", function(data_from_file){
 })
 
 </script>
+
+
 
 </body>
 </html>
