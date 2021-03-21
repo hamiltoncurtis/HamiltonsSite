@@ -27,6 +27,12 @@ body {
 .navbar.navbar-expand-sm.navbar-custom.sticky-top li a {
     color: black;
 }
+.hide{
+  display:none;
+}
+.center {
+  text-align:center;
+}
 
   </style>
 </head>
@@ -48,17 +54,52 @@ body {
   </ul>
 </nav>
 <canvas id="myChart"></canvas>
-    <br>
-    <p class="center"><button id="showYear" class="hide">Toggle to Year</button></p>
-    <!-- (best practice to load all the script files at the bottom) -->
-    
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
-    <!-- loading a javascript library for data visualization Charts.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-    <!-- local javascript file -->
-    <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+$.getJSON("PrecinctWarningData.json", function(data_from_file){
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    console.log(data_from_file)
+
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: ['Vehicular', 'Pedestrian'],
+            datasets: [{
+                label: 'Fake data',
+                backgroundColor: ['#365232',
+                                  '#000000'],
+                borderColor: 'rgb(255, 99, 132)',
+                data: [data_from_file["x"], data_from_file["y"]],
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+        scales: {
+                yAxes: [{
+                    display: true,
+                    stacked: true,
+                    ticks: {
+                        min: 0, // minimum value
+                        max: 10 // maximum value
+                    }
+                }]
+            }
+        }
+    });
+
+})
+
+</script>
 
 </body>
 </html>
