@@ -44,6 +44,8 @@
     </li>
   </ul>
 </nav>
+<div class="chart-container" style="position: relative; height:40vh; width:80vw">
+
 <canvas id="myChart"></canvas>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -82,7 +84,7 @@ $.getJSON("https://raw.githubusercontent.com/hacu0647/HamiltonsSite/main/Precinc
                     stacked: true,
                     ticks: {
                         min: 0, // minimum value
-                        max: 19 // maximum value
+                        max: 18 // maximum value
                     }
                 }]
             }
@@ -92,7 +94,7 @@ $.getJSON("https://raw.githubusercontent.com/hacu0647/HamiltonsSite/main/Precinc
 })
 
 </script>
-
+</div>
 
 
 </body>
