@@ -55,8 +55,8 @@
 $.getJSON("PrecinctWarningData.json", function(data_from_file){
 
     var ctx = document.getElementById('myChart').getContext('2d');
-    console.log("hey you got data")
-    console.log(data_from_file)
+    
+    //console.log(data_from_file)
 
     var chart = new Chart(ctx, {
         // The type of chart we want to create
