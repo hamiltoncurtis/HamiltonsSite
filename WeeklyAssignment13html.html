@@ -58,7 +58,7 @@ body {
   </ul>
 </nav>
 <body>
-  <div id="vis-interactive-line2"></div>
+  <div class="center" id="vis-interactive-line2"></div>
             <script type="text/javascript">
             var spec = {
               "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -75,11 +75,11 @@ body {
                   }
                 },
               "data": {
-                "url": "https://vega.github.io/vega-datasets/data/weather.csv"},
+                "url": "https://raw.githubusercontent.com/hacu0647/HamiltonsSite/main/DOGE-USD.csv"},
               "mark": {
                   "type": "area",
                   "line": {
-                      "color": "green"
+                      "color": "yellow"
                   },
                   "color": {
                   "x1": 1,
@@ -106,9 +106,9 @@ body {
                   "title": "Date"
                 },
                 "y": {
-                  "field": "precipitation",
+                  "field": "Close",
                   "type": "quantitative",
-                  "title": "Precipitation"
+                  "title": "Closing Price"
                 },
               },
             };
