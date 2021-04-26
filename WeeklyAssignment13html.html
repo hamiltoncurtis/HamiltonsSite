@@ -119,6 +119,51 @@ body {
             </script>
 </body>
 
+<p></p>
+
+<body class="center">
+  <div id="vis-interactive-line3"></div>
+            <script type="text/javascript">
+            var spec2 = {
+              "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+              "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
+              "width": 800,
+              "height": 400,
+              "padding": 5,
+              "autosize": "pad",
+              "config": {
+                  "axis": {
+                      "labelFont": "monospace",
+                      "labelFontSize": 20,
+                      "titleFont": "Times New Roman",
+                      "titleFontSize": 30,
+                      "titlePadding": 20
+                  }
+                },
+              "data": {
+                "url": "https://raw.githubusercontent.com/hacu0647/HamiltonsSite/main/DJIA.csv"},
+              "mark": {
+                "line": {
+                    "color": "green"
+                  }
+              },
+              "encoding": {
+                "x": {
+                  "field": "DATE", 
+                  "type": "ordinal", 
+                  "title": "Date"
+                },
+                "y": {
+                  "field": "DIJA",
+                  "type": "quantitative",
+                  "title": "DOW Industrial Avg"
+                },
+              },
+            };
+            var op2 = {"renderer": "canvas", "actions": false};
+            vegaEmbed("#vis-interactive-line3", spec2, opt2);
+            </script>
+</body>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
