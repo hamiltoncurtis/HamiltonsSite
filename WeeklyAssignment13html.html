@@ -57,14 +57,16 @@ body {
     </li>
   </ul>
 </nav>
-<body>
-  <div class="center" id="vis-interactive-line2"></div>
+<body class="center">
+  <div id="vis-interactive-line2"></div>
             <script type="text/javascript">
             var spec = {
               "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
               "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
               "width": 800,
               "height": 400,
+              "padding": 5,
+              "autosize": "pad",
               "config": {
                   "axis": {
                       "labelFont": "monospace",
@@ -101,8 +103,8 @@ body {
                 },
               "encoding": {
                 "x": {
-                  "field": "date", 
-                  "type": "temporal", 
+                  "field": "Date", 
+                  "type": "ordinal", 
                   "title": "Date"
                 },
                 "y": {
